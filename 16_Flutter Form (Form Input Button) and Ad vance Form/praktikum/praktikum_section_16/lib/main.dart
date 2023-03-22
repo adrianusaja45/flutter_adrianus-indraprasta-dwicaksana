@@ -5,6 +5,4 @@ import 'material_app.dart';
 
 void main() {
   runApp(const App());
-  
 }
-
