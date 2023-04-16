@@ -11,7 +11,7 @@ class ApiAvatar {
   static Future<Avatar> getAvatar() async {
     final response = await Dio().getUri(Uri.parse(baseUrl));
     if (response.statusCode == 200) {
-      return Avatar.fromJson(jsonDecode(response.data));
+      return Avatar.fromJson(response.data);
     } else {
       throw Exception('Failed to load avatar');
     }
